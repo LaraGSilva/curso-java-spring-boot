@@ -60,20 +60,52 @@ public class Condicionais {
 				break;
 				
 			case 5:
+				
 				double CQ = 4.00;
 				double xsalada = 4.50;
 				double xbacon = 5.00;
 				double torradaSimples = 2.00;
 				double refrigerante = 1.50;
-				int opcaoComida;
+				double opcaoComida;
 				do {
 				System.out.println("Digite as opções que voce escolheu \n 1-Qc\n 2-xsalada \n 3-xbacon \n 4- torrada simples \n 5-refrigerante");
 				 opcaoComida = sc.nextInt();
+				 
 				 System.out.println("Voce escolheu as opções: " + opcaoComida);
 				 
-				 int[] pedido = new int[5];
-				 for(i <0; pedido.length)
+				if(opcaoComida == CQ) {
+					//total = opcaoComida * qntd;
+					
+				}
+				
+				// Pode ler tudo como um vetor e atribuir os elemento a outras variáveis:
+				//String peca1[] = entrada.nextLine().split(" ");
+				//int peca1Quant = Integer.parseInt(peca1[1]);
+				//double peca1Valor = Double.parseDouble(peca1[2]);
+				 
 				}while (opcaoComida != 0);
+				
+			case 6:
+				System.out.println("Digite um valor");
+				double valor = sc.nextDouble();
+				
+				if (valor > 0 && valor < 25) {
+					System.out.println("Intervalo (0,25]");
+				}else if(valor > 25 && valor < 50) {
+					System.out.println("Intervalo (25,50]");
+				}else if(valor > 50 && valor < 75) {
+					System.out.println("Intervalo (50, 75]");
+				}else if(valor > 75 && valor < 100) {
+					System.out.println("Intervalo (75,100]");
+				}else {
+					System.out.println("Fora do intervalo");
+				}
+					
+				break;
+				
+			case 7:
+				
+				break;
 			}
 
 			sc.close();
