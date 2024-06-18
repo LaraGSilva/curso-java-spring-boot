@@ -23,9 +23,33 @@ public class Condicionais {
 					System.out.println("Esse numero é negatvio");
 				}
 				break;
-
+			case 2:
+				System.out.println("Digite um numero");
+				int numero = sc.nextInt();
+				
+				if (numero % 2  == 0) {
+					System.out.println("Esse numero é par");
+				}else {
+					System.out.println("Esse numero é impar");
+				}
+				break;
+			case 3:
+				System.out.println("Digite o valor de A: ");
+				int a = sc.nextInt();
+				System.out.println("Digite o valor deB: ");
+				int b = sc.nextInt();
+				
+				if(a % b  == 0) {
+					System.out.println("São multiplos");
+				}else if (b % a  == 0){
+					System.out.println("São multiplos");
+				}else {
+					System.out.println("Não são multiplos");
+				}
+				break;
+					
 			}
 
-		} while (opcao != 2);
+		} while (opcao != 7);
 	}
 }
