@@ -47,9 +47,36 @@ public class Condicionais {
 					System.out.println("Não são multiplos");
 				}
 				break;
-					
+				
+			case 4:
+				System.out.println("Digite a duracao do jogo: ");
+				double horario = sc.nextDouble();
+				
+				if (horario > 24) {
+					System.out.println("O jogo durou mais de um dia");
+				}else {
+					System.out.println(" O joo durou: " + horario);
+				}
+				break;
+				
+			case 5:
+				double CQ = 4.00;
+				double xsalada = 4.50;
+				double xbacon = 5.00;
+				double torradaSimples = 2.00;
+				double refrigerante = 1.50;
+				int opcaoComida;
+				do {
+				System.out.println("Digite as opções que voce escolheu \n 1-Qc\n 2-xsalada \n 3-xbacon \n 4- torrada simples \n 5-refrigerante");
+				 opcaoComida = sc.nextInt();
+				 System.out.println("Voce escolheu as opções: " + opcaoComida);
+				 
+				 int[] pedido = new int[5];
+				 for(i <0; pedido.length)
+				}while (opcaoComida != 0);
 			}
 
+			sc.close();
 		} while (opcao != 7);
 	}
 }
