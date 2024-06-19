@@ -133,7 +133,45 @@ public class Condicionais {
 				break;
 
 			case 7:
+				System.out.println("Digite o valor de x");
+				int x = sc.nextInt();
+
+				System.out.println("Digite o valor de y");
+				int y = sc.nextInt();
+
+				if (x == 0 && y == 0) {
+					System.out.println("O ponto esta na origem");
+				} else if (x > 0 && y > 0) {
+					System.out.println("O ponto esta no Q1");
+				} else if (x < 0 && y < 0) {
+					System.out.println("O ponto esta no Q3");
+				} else if (x > 0 && y < 0) {
+					System.out.println("O ponto esta no Q4");
+				} else if (x < 0 && y > 0) {
+					System.out.println("O ponto esta no Q2");
+				} else {
+					System.out.println("O ponto nao esta em nehum lugar");
+				}
 				break;
+
+			case 8:
+				System.out.println("Digite o seu salario: ");
+				double salario = sc.nextDouble();
+
+				if (salario > 0.0 && salario < 2000.0) {
+					System.out.println("Isento");
+				} else if (salario > 2000.01 && salario < 3000.0) {
+					double pagar = (salario * 0.08);
+					System.out.printf("Deve pagar = %.2", pagar);
+				} else if (salario > 3000.01 && salario < 4500.0) {
+					double pagar = salario * 1.8;
+					System.out.printf("Deve pagar = %.2f ", pagar);
+				} else if (salario > 4500.0) {
+					double pagar = salario * 2.8;
+					System.out.printf("Deve pagar = %.2", pagar);
+				}else {
+					System.out.println("Fora do range");
+				}
 			}
 		} while (opcao != 7);
 
