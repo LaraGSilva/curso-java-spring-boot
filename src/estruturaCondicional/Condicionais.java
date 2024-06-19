@@ -14,10 +14,13 @@ public class Condicionais {
         do {
             System.out.println("\n ########### Digite a opção que deseja ########### \n");
             opcao = sc.nextInt();
+            sc.nextLine(); // Limpar o buffer após nextInt()
+
             switch (opcao) {
                 case 1:
                     System.out.println("Digite um numero");
                     int number = sc.nextInt();
+                    sc.nextLine(); // Limpar o buffer após nextInt()
 
                     if (number >= 0) {
                         System.out.println("Esse numero é positivo");
@@ -29,6 +32,7 @@ public class Condicionais {
                 case 2:
                     System.out.println("Digite um numero");
                     int numero = sc.nextInt();
+                    sc.nextLine(); // Limpar o buffer após nextInt()
 
                     if (numero % 2 == 0) {
                         System.out.println("Esse numero é par");
@@ -40,10 +44,10 @@ public class Condicionais {
                 case 3:
                     System.out.println("Digite o valor de A: ");
                     int a = sc.nextInt();
-                    sc.nextLine();  // Limpar o buffer após nextInt()
+                    sc.nextLine(); // Limpar o buffer após nextInt()
                     System.out.println("Digite o valor de B: ");
                     int b = sc.nextInt();
-                    sc.nextLine();  // Limpar o buffer após nextInt()
+                    sc.nextLine(); // Limpar o buffer após nextInt()
 
                     if (a % b == 0) {
                         System.out.println("São múltiplos");
@@ -55,7 +59,7 @@ public class Condicionais {
                     break;
 
                 case 4:
-                    sc.nextLine();  // Limpar o buffer após nextInt()
+                    sc.nextLine(); // Limpar o buffer após nextInt()
                     System.out.println("Digite o horário inicial do jogo (HH:mm): ");
                     String horaInicial = sc.nextLine();
 
@@ -78,46 +82,104 @@ public class Condicionais {
                     break;
 
                 case 5:
-                    double CQ = 4.00;
-                    double xsalada = 4.50;
-                    double xbacon = 5.00;
-                    double torradaSimples = 2.00;
-                    double refrigerante = 1.50;
-                    int opcaoComida;
-                    do {
-                        System.out.println("Digite as opções que você escolheu \n 1-Qc\n 2-xsalada \n 3-xbacon \n 4- torrada simples \n 5-refrigerante");
-                        opcaoComida = sc.nextInt();
-                        sc.nextLine();  // Limpar o buffer após nextInt()
-                        System.out.println("Você escolheu as opções: " + opcaoComida);
+                    System.out.println("Digite o numero do que deseja pedir: ");
+                    int pedido = sc.nextInt();
+                    System.out.println("Digite a quantidade: ");
+                    int quantidade = sc.nextInt();
+                    sc.nextLine(); // Limpar o buffer após nextInt()
 
-                        // Pode ler tudo como um vetor e atribuir os elementos a outras variáveis:
-                        // String peca1[] = entrada.nextLine().split(" ");
-                        // int peca1Quant = Integer.parseInt(peca1[1]);
-                        // double peca1Valor = Double.parseDouble(peca1[2]);
-                    } while (opcaoComida != 0);
+                    double CachorroQuente = 4.00;
+                    double XSalada = 4.50;
+                    double XBacon = 5.00;
+                    double TorradaSimples = 2.00;
+                    double Refrigente = 1.50;
+
+                    double total1 = 0;
+                    switch (pedido) {
+                        case 1:
+                            total1 = CachorroQuente * quantidade;
+                            break;
+                        case 2:
+                            total1 = XSalada * quantidade;
+                            break;
+                        case 3:
+                            total1 = XBacon * quantidade;
+                            break;
+                        case 4:
+                            total1 = TorradaSimples * quantidade;
+                            break;
+                        case 5:
+                            total1 = Refrigente * quantidade;
+                            break;
+                        default:
+                            System.out.println("Opção inválida");
+                            break;
+                    }
+
+                    System.out.printf("O total a pagar é %.2f", total1);
                     break;
 
                 case 6:
                     System.out.println("Digite um valor");
                     double valor = sc.nextDouble();
+                    sc.nextLine(); // Limpar o buffer após nextDouble()
 
                     if (valor > 0 && valor < 25) {
                         System.out.println("Intervalo (0,25]");
-                    } else if (valor > 25 && valor < 50) {
-                        System.out.println("Intervalo (25,50]");
-                    } else if (valor > 50 && valor < 75) {
-                        System.out.println("Intervalo (50, 75]");
-                    } else if (valor > 75 && valor < 100) {
-                        System.out.println("Intervalo (75,100]");
+                    } else if (valor >= 25 && valor < 50) {
+                        System.out.println("Intervalo [25,50)");
+                    } else if (valor >= 50 && valor < 75) {
+                        System.out.println("Intervalo [50,75)");
+                    } else if (valor >= 75 && valor <= 100) {
+                        System.out.println("Intervalo [75,100]");
                     } else {
                         System.out.println("Fora do intervalo");
                     }
                     break;
 
                 case 7:
+                    System.out.println("Digite o valor de x");
+                    int x = sc.nextInt();
+                    System.out.println("Digite o valor de y");
+                    int y = sc.nextInt();
+
+                    if (x == 0 && y == 0) {
+                        System.out.println("O ponto está na origem");
+                    } else if (x > 0 && y > 0) {
+                        System.out.println("O ponto está no Q1");
+                    } else if (x < 0 && y > 0) {
+                        System.out.println("O ponto está no Q2");
+                    } else if (x < 0 && y < 0) {
+                        System.out.println("O ponto está no Q3");
+                    } else if (x > 0 && y < 0) {
+                        System.out.println("O ponto está no Q4");
+                    } else {
+                        System.out.println("O ponto não está em nenhum quadrante");
+                    }
+                    break;
+
+                case 8:
+                    System.out.println("Digite o seu salário: ");
+                    double salario = sc.nextDouble();
+                    sc.nextLine(); // Limpar o buffer após nextDouble()
+
+                    if (salario > 0.0 && salario < 2000.0) {
+                        System.out.println("Isento");
+                    } else if (salario >= 2000.01 && salario < 3000.0) {
+                        double pagar = salario * 0.08;
+                        System.out.printf("Deve pagar = %.2f", pagar);
+                    } else if (salario >= 3000.01 && salario < 4500.0) {
+                        double pagar = salario * 0.18;
+                        System.out.printf("Deve pagar = %.2f", pagar);
+                    } else if (salario >= 4500.0) {
+                        double pagar = salario * 0.28;
+                        System.out.printf("Deve pagar = %.2f", pagar);
+                    } else {
+                        System.out.println("Fora do range");
+                    }
                     break;
             }
-        } while (opcao != 7);
+        } while (opcao != 9);
 
         sc.close();
     }
