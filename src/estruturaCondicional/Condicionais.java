@@ -172,7 +172,13 @@ public class Condicionais {
 				}else {
 					System.out.println("Fora do range");
 				}
+				
+				
+			default:
+				System.out.println("Insira um numero valido");
+				break;
 			}
+			
 		} while (opcao != 7);
 
 		sc.close();
