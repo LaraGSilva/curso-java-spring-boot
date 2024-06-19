@@ -59,7 +59,6 @@ public class Condicionais {
                     break;
 
                 case 4:
-                    sc.nextLine(); // Limpar o buffer após nextInt()
                     System.out.println("Digite o horário inicial do jogo (HH:mm): ");
                     String horaInicial = sc.nextLine();
 
@@ -142,6 +141,7 @@ public class Condicionais {
                     int x = sc.nextInt();
                     System.out.println("Digite o valor de y");
                     int y = sc.nextInt();
+                    sc.nextLine(); // Limpar o buffer após nextInt()
 
                     if (x == 0 && y == 0) {
                         System.out.println("O ponto está na origem");
@@ -178,7 +178,12 @@ public class Condicionais {
                         System.out.println("Fora do range");
                     }
                     break;
+
+                default:
+                    System.out.println("Insira um número válido");
+                    break;
             }
+
         } while (opcao != 9);
 
         sc.close();
