@@ -40,10 +40,10 @@ public class Condicionais {
                 case 3:
                     System.out.println("Digite o valor de A: ");
                     int a = sc.nextInt();
-                    sc.nextLine();
+                    sc.nextLine();  // Limpar o buffer após nextInt()
                     System.out.println("Digite o valor de B: ");
                     int b = sc.nextInt();
-                    sc.nextLine();
+                    sc.nextLine();  // Limpar o buffer após nextInt()
 
                     if (a % b == 0) {
                         System.out.println("São múltiplos");
@@ -55,7 +55,7 @@ public class Condicionais {
                     break;
 
                 case 4:
-                    sc.nextLine();
+                    sc.nextLine();  // Limpar o buffer após nextInt()
                     System.out.println("Digite o horário inicial do jogo (HH:mm): ");
                     String horaInicial = sc.nextLine();
 
@@ -85,10 +85,9 @@ public class Condicionais {
                     double refrigerante = 1.50;
                     int opcaoComida;
                     do {
-                        System.out.println(
-                            "Digite as opções que você escolheu \n 1-Qc\n 2-xsalada \n 3-xbacon \n 4- torrada simples \n 5-refrigerante");
+                        System.out.println("Digite as opções que você escolheu \n 1-Qc\n 2-xsalada \n 3-xbacon \n 4- torrada simples \n 5-refrigerante");
                         opcaoComida = sc.nextInt();
-                        sc.nextLine(); // Limpar o buffer após nextInt()
+                        sc.nextLine();  // Limpar o buffer após nextInt()
                         System.out.println("Você escolheu as opções: " + opcaoComida);
 
                         // Pode ler tudo como um vetor e atribuir os elementos a outras variáveis:
