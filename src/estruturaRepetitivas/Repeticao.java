@@ -103,8 +103,83 @@ public class Repeticao {
 				break;
 
 			case 6:
-			}
+				System.out.println("Digite um valor: ");
+				int i = sc.nextInt();
+				for (int j = 0; j <= i; j++) {
+					if (i % 2 != 0) {
+						System.out.println(j);
+					}
 
+				}
+
+				break;
+
+			case 7:
+				System.out.println("Digite um valor: ");
+				int valor = sc.nextInt();
+
+				for (int e = 0; e < valor; e++) {
+					System.out.println("Digite os proximos numeros");
+					int num = sc.nextInt();
+					if (num >= 10 && num <= 20) {
+						System.out.println(num + " in");
+					} else {
+						System.out.println(num + " out");
+					}
+
+				}
+				break;
+
+			case 8:
+				System.out.println("Digite um valor: ");
+				int b = sc.nextInt();
+
+				for (int c = 0; c < b; c++) {
+					double var1 = sc.nextDouble();
+					double var2 = sc.nextDouble();
+					double var3 = sc.nextDouble();
+
+					double media = ((var1 * 2 + var2 * 3 + var3 * 5) / 10);
+					System.out.println(media);
+
+				}
+
+			case 9:
+				System.out.println("Digite o=um numero para o fatorial");
+				int h = sc.nextInt();
+				int resultado = 1;
+				for (int y = 1; y <= h; y++) {
+					resultado = resultado * y;
+					System.out.println(resultado);
+				}
+
+				break;
+
+			case 10:
+				System.out.println("Digite um numero: ");
+				int j = sc.nextInt();
+				sc.nextLine();
+				for (int o = 1; o <= j; o++) {
+					int auxD = o * o;
+					int auxT = o * o * o;
+					/*
+					 * System.out.println(auxD); System.out.println(auxT);
+					 */
+					System.out.printf("%d %d %d", o, auxD, auxT);
+					System.out.println();
+
+				}
+				
+			case 11:
+				System.out.println("Digite um numero: ");
+				int f = sc.nextInt();
+				sc.nextLine();
+				for (int q = 1; q <= f; q++) {
+					if ( f % q == 0) {
+						System.out.println(q);
+					}
+				}
+			}
 		} while (opcao != 2);
 
 		sc.close();
