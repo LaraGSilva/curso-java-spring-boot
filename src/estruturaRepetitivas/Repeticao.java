@@ -83,13 +83,26 @@ public class Repeticao {
 					} else if (codigo == 3) {
 						soma3 += 1;
 						System.out.printf("Diesel: %d", soma3);
-					}else {
+					} else {
 						System.out.println("Obrigada");
 					}
-					
+
 					codigo = sc.nextInt();
 				}
+				break;
 
+			case 5:
+				System.out.println("Digite o valor de N: ");
+				int n = sc.nextInt();
+				int result = 0;
+				for (int i = 0; i < n; i++) {
+					int t = sc.nextInt();
+					result += t;
+				}
+				System.out.println("A soma dos inseridos é:" + result);
+				break;
+
+			case 6:
 			}
 
 		} while (opcao != 2);
