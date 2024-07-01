@@ -3,6 +3,7 @@ package application;
 import java.util.Scanner;
 
 import entities.Studient;
+import util.Calculadora;
 
 public class Application {
 
@@ -70,20 +71,26 @@ public class Application {
 		
 		//exc 4
 		
-		System.out.println("Enter your name: ");
-		String name1 = sc.next();
+		/*
+		 * System.out.println("Enter your name: "); String name1 = sc.next();
+		 * 
+		 * System.out.println("Enter your grades: "); double grade1 = sc.nextDouble();
+		 * double grade2 = sc.nextDouble(); double grade3 = sc.nextDouble();
+		 * 
+		 * Studient std = new Studient();
+		 * 
+		 * 
+		 * std.media(grade1, grade2, grade3); System.out.println(std.getMedia());
+		 * std.verifyStatus();
+		 */
+		System.out.println("Digite o valor para o calculo:");
+		double var = sc.nextDouble();
+		double c = Calculadora.circumference(var);
+		double v = Calculadora.volume(var);
+		System.out.println(Calculadora.PI);
 		
-		System.out.println("Enter your grades: ");
-		double grade1 = sc.nextDouble();
-		double grade2 = sc.nextDouble();
-		double grade3 = sc.nextDouble();
-		
-		Studient std = new Studient();
 		
 		
-		std.media(grade1, grade2, grade3);
-		System.out.println(std.getMedia());
-		std.verifyStatus();
 		
 	}
 
