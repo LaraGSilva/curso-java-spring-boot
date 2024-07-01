@@ -4,6 +4,7 @@ import java.util.Scanner;
 
 import entities.Studient;
 import util.Calculadora;
+import util.CurrencyConverter;
 
 public class Application {
 
@@ -90,7 +91,13 @@ public class Application {
 		System.out.println(Calculadora.PI);
 		
 		
+		System.out.println("Digite o valor do dolar");
+		double dolar = sc.nextDouble();
 		
+		System.out.println("Digite a quantidade");
+		double qntd = sc.nextDouble();
+		
+		System.out.println(CurrencyConverter.converter(dolar, qntd));
 		
 	}
 
