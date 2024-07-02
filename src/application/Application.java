@@ -21,7 +21,7 @@ public class Application {
 		System.out.println("Quantity: ");
 		int quantity = sc.nextInt();
 
-		Produto produto = new Produto(name, );
+		Produto produto = new Produto(name, price, quantity);
 		
 		produto.setPrice(price);
 		produto.setQuantity(quantity);
